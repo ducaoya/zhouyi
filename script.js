@@ -77,7 +77,7 @@ function getGuaDetail(guas, list) {
  * @param {Array} list
  * @param {HTMLCanvasElement} cav
  */
-function draw(list, cav, width = 100, height = 130) {
+function draw(list, cav, width = 100, height = 150) {
   cav.width = width;
   cav.height = height;
   const ctx = cav.getContext("2d");
