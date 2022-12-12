@@ -77,7 +77,7 @@ function getGuaDetail(guas, list) {
  * @param {Array} list
  * @param {HTMLCanvasElement} cav
  */
-function draw(list, cav, width = 100, height = 150) {
+function draw(list, cav, width = 100, height = 130) {
   cav.width = width;
   cav.height = height;
   const ctx = cav.getContext("2d");
@@ -87,11 +87,11 @@ function draw(list, cav, width = 100, height = 150) {
   list.forEach((item, index) => {
     if (item) {
       // 1
-      ctx.fillRect(10, 10 + (list.length - index) * 20, 80, 10);
+      ctx.fillRect(10, 10 + (list.length - index - 1) * 20, 80, 10);
     } else {
       // 0
-      ctx.fillRect(10, 10 + (list.length - index) * 20, 35, 10);
-      ctx.fillRect(55, 10 + (list.length - index) * 20, 35, 10);
+      ctx.fillRect(10, 10 + (list.length - index - 1) * 20, 35, 10);
+      ctx.fillRect(55, 10 + (list.length - index - 1) * 20, 35, 10);
     }
   });
 }
